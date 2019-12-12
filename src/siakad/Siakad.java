@@ -24,7 +24,7 @@ public class Siakad {
     public static java.sql.Connection koneksinya(){
         try {
             MysqlDataSource kon = new MysqlDataSource();
-            kon.setDatabaseName("supermarket");
+            kon.setDatabaseName("siakad");
             kon.setUser("root");
             kon.setPassword("");
             koneksi = kon.getConnection();
