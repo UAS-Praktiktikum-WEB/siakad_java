@@ -25,7 +25,7 @@ public class menuLogin extends javax.swing.JFrame {
         initComponents();
         koneksi();
     }
-    
+    public String usernya;
     static final String jdbc = "com.mysql.jdbc.Driver";
     static final String url = "jdbc:mysql://localhost/siakad";
     static final String username1 = "root";
@@ -231,9 +231,14 @@ public class menuLogin extends javax.swing.JFrame {
                   a.setVisible(true);
                   this.dispose();
                 }else if (rs.getString("level").equals("Dosen")) {
-                    
+                     menuDosen c=new menuDosen();
+                    c.setVisible(true);
+                    this.dispose();
                 }
                 else if (rs.getString("level").equals("Mahasiswa")) {
+                    menuMahasiswa b=new menuMahasiswa(user.getText());
+                    b.setVisible(true);
+                    this.dispose();
                     
                 }
                 
